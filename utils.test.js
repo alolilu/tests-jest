@@ -23,3 +23,12 @@ test("factorielle de 0 doit être 1", () => {
 test("factorielle d'un nombre négatif doit lever une erreur", () => {
   expect(() => factorielle(-1)).toThrow("Nombre négatif interdit");
 });
+
+test("Vérifier si somme est appelée avec les bons arguments", () => {
+  const mockSomme = jest.fn(somme);
+
+  mockSomme(2, 3);
+
+  expect(mockSomme).toHaveBeenCalled();
+  expect(mockSomme).toHaveBeenCalledWith(2, 3);
+});

@@ -19,6 +19,4 @@ test("Simulation de saisie et connexion", async ({ page }) => {
   await page.fill('input[name="password"]', "password123");
 
   await page.click('button[type="submit"]');
-
-  // Ici, on ne redirige pas vraiment donc pas de vérification d'URL
 });

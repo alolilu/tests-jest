@@ -1,4 +1,4 @@
-const { somme, estPair, factorielle } = require("./utils");
+const { somme, estPair, factorielle, inverse } = require("./utils");
 
 test("somme de 2 et 3 doit être 5", () => {
   expect(somme(2, 3)).toBe(5);
@@ -31,4 +31,16 @@ test("Vérifier si somme est appelée avec les bons arguments", () => {
 
   expect(mockSomme).toHaveBeenCalled();
   expect(mockSomme).toHaveBeenCalledWith(2, 3);
+});
+
+test('inverse("hello") doit retourner "olleh"', () => {
+  expect(inverse("hello")).toBe("olleh");
+});
+
+test('inverse("Test") doit retourner "tseT"', () => {
+  expect(inverse("Test")).toBe("tseT");
+});
+
+test('inverse("") doit retourner ""', () => {
+  expect(inverse("")).toBe("");
 });

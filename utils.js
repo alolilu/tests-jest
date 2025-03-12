@@ -12,4 +12,8 @@ function factorielle(n) {
   return n * factorielle(n - 1);
 }
 
-module.exports = { somme, estPair, factorielle };
+function inverse(chaine) {
+  return chaine.split("").reverse().join("");
+}
+
+module.exports = { somme, estPair, factorielle, inverse };
